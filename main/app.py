@@ -58,6 +58,8 @@ def get_img():
         mesh = pyvista.ParametricBohemianDome()
     elif meshtype == 'Cylinder':
         mesh = pyvista.Cylinder()
+    elif meshtype == 'Cuenca':
+        mesh = pyvista.read('Heads_VTK/regional_model_head_000000.vtu')
     elif meshtype == 'Vectors':
         n_points = 20
         points = np.random.random((n_points, 3))
